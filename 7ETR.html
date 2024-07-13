@@ -26,5 +26,30 @@
 </head>
 <body>
     <button id="fullScreenButton"></button>
-    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="100%" src="https://cdn.videy.co/HIXRoaYx.mp4" width="100%" id="miVideo"></iframe>
+    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="100%" src="https://cdn.videy.co/HIXRoaYx.mp44" width="100%" id="miVideo"></iframe>
 
+    <script>
+        function ponerEnPantallaCompleta() {
+            const video = document.getElementById('miVideo');
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.mozRequestFullScreen) {
+                video.mozRequestFullScreen();
+            } else if (video.webkitRequestFullscreen) {
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) {
+                video.msRequestFullscreen();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const button = document.getElementById('fullScreenButton');
+            button.addEventListener('click', function() {
+                ponerEnPantallaCompleta();
+                button.remove();
+            });
+        });
+    </script>
+</body>
+</html>
+<script type='text/javascript' src='//pl23764615.highrevenuenetwork.com/a4/8e/ef/a48eef83b5ff6da5932816c41b850224.js'></script>
